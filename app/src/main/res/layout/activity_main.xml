@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="net.bingyan.hustpass.scanner.activity.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+
+            <android.support.v7.widget.Toolbar
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed|snap"
+                android:id="@+id/toolbar"
+                app:titleTextColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="物流助手" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.SearchView
+                    android:id="@+id/sv_search_user_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:queryHint="@string/hint_search_user_info" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab_add_user_info"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="end|bottom"-->
+        <!--android:layout_margin="16dp"-->
+        <!--android:src="@drawable/ic_add_black_24dp" />-->
+
+    <net.bingyan.hustpass.scanner.ExpandableFAB
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:id="@+id/id_expandable_fab"
+        android:layout_gravity="end|bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </net.bingyan.hustpass.scanner.ExpandableFAB>
+
+</android.support.design.widget.CoordinatorLayout>
